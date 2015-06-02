@@ -22,6 +22,12 @@ var webpackConfig = {
       {test: /\.jsx?$/, exclude: /node_modules/, loaders: ['react-hot', 'babel-loader?optional=runtime']},
     ]
   },
+  resolve: {
+    // Needed so you can require('a') instead of require('a.jsx')
+    extensions: ['', '.js', '.jsx', '.json', '.styl'],
+    // Let us do things like require('app/stores/Channel')
+    root: __dirname
+  },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
   ]
