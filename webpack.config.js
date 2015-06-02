@@ -4,10 +4,6 @@ var webpackConfig = {
   entry: {
     app: './src/index.js'
   },
-  output: {
-    path: './build',
-    filename: 'bundle.js',
-  },
   devtool: 'eval-source-map',
   module: {
     loaders: [
